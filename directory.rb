@@ -1,13 +1,30 @@
 #This array contains a listof all current students
-students = ["Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched", "Michael Corleone",
-"Alex DeLarge", "The Wicked Witch of the West", "Terminator", "Freddy Krueger", "The Joker",
-"Joffrey Baratheon", "Norman Bates"]
+students = [
+["Dr. Hannibal Lecter", :november], 
+["Darth Vader", :november],
+["Nurse Ratched", :november], 
+["Michael Corleone", :november],
+["Alex DeLarge", :november], 
+["The Wicked Witch of the West", :november],
+["Terminator", :november],
+["Freddy Krueger", :november],
+["The Joker", :november],
+["Joffrey Baratheon", :november],
+["Norman Bates", :november]
+ ]
 
-#This prints out the name of every student from the students array
-puts "The students of Villains Academy"
-puts "-------------"
-students.each do |x|
-  puts x
+
+def print(names)
+  puts "The students of Villains Academy"
+  puts "-------------"
+  names.each do |x|
+    puts "#{x[0]} (#{x[1]} cohort)" 
+  end
 end
-# finally, we print the total number of students
-puts "Overall, we have #{students.length} great students. "
+
+def print_footer(names)
+  puts "Overall, we have #{names.length} great students. "
+end
+
+print(students)
+print_footer(students)
